@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Rolati: Cine Reels Scout</title>
+  <meta name="description" content="Contact and support for Rolati: Cine Reels Scout.">
+  <meta name="theme-color" content="#fffdf5">
+  <link rel="canonical" href="index.html">
+
+  <style>
+    :root {
+      --paper: #fffdf5;
+      --ink: #111014;
+      --ink-soft: #3d3b45;
+      --muted: #6b6875;
+      --yellow: #ffd93d;
+      --coral: #ff6b5a;
+      --blue: #4d7cff;
+      --mint: #6be3a8;
+      --lilac: #c9b6ff;
+      --bd: 2px solid var(--ink);
+      --shadow: 6px 6px 0 var(--ink);
+      --shadow-sm: 4px 4px 0 var(--ink);
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, "Helvetica Neue", Arial, sans-serif;
+      --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 17px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .mono {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    /* ---------- Header ---------- */
+    header.site {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: var(--paper);
+      border-bottom: var(--bd);
+    }
+
+    header.site .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      min-height: 64px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 17px;
+      letter-spacing: -.02em;
+      text-transform: uppercase;
+      min-width: 0;
+    }
+
+    .brand .mark {
+      width: 28px;
+      height: 28px;
+      flex: 0 0 28px;
+      border: var(--bd);
+      border-radius: 6px;
+      background: var(--yellow);
+      position: relative;
+    }
+
+    .brand .mark::after {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 7px;
+      border-left: 9px solid var(--ink);
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+    }
+
+    nav.site { display: flex; gap: 8px; flex: 0 0 auto; }
+
+    nav.site a {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 8px 13px;
+      border: var(--bd);
+      border-radius: 7px;
+      background: var(--paper);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+
+    nav.site a:hover { transform: translate(-1px, -1px); box-shadow: 3px 3px 0 var(--ink); }
+    nav.site a.active { background: var(--yellow); box-shadow: 3px 3px 0 var(--ink); }
+
+    /* ---------- Hero ---------- */
+    .hero { padding: 68px 0 56px; border-bottom: var(--bd); }
+
+    .eyebrow {
+      display: inline-block;
+      background: var(--mint);
+      border: var(--bd);
+      border-radius: 6px;
+      padding: 6px 13px;
+      margin-bottom: 22px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    h1 {
+      font-size: clamp(46px, 10vw, 92px);
+      line-height: .94;
+      letter-spacing: -.045em;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin: 0 0 24px;
+    }
+
+    h1 .line2 { display: block; color: var(--coral); }
+
+    .standfirst {
+      font-size: 19px;
+      color: var(--ink-soft);
+      margin: 0;
+      max-width: 32em;
+    }
+
+    /* ---------- Cards ---------- */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      padding: 50px 0 10px;
+    }
+
+    .card {
+      display: block;
+      text-decoration: none;
+      border: var(--bd);
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+
+    a.card:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--ink); }
+
+    .card .head {
+      padding: 12px 20px;
+      border-bottom: var(--bd);
+      background: var(--yellow);
+    }
+
+    .card.c-blue .head { background: var(--blue); color: #fff; }
+
+    .card .in { padding: 24px 22px 26px; }
+
+    .card h2 {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -.015em;
+      margin: 0 0 8px;
+    }
+
+    .card p { margin: 0; color: var(--ink-soft); font-size: 16px; }
+
+    .card .val {
+      display: inline-block;
+      margin-top: 16px;
+      font-weight: 800;
+      border-bottom: 3px solid var(--yellow);
+      word-break: break-word;
+    }
+
+    .card.c-blue .val { border-bottom-color: var(--blue); }
+
+    /* ---------- Info rows ---------- */
+    .rows { padding: 44px 0 6px; }
+
+    .row {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 32px;
+      padding: 24px 0;
+      border-top: 2px dashed rgba(17, 16, 20, .2);
+    }
+
+    .row:first-child { border-top: none; padding-top: 0; }
+
+    .row .label { color: var(--muted); }
+    .row p { margin: 0; color: var(--ink-soft); }
+    .row p b { color: var(--ink); font-weight: 700; }
+
+    /* ---------- Contact ---------- */
+    .contact {
+      border: var(--bd);
+      border-radius: 14px;
+      background: var(--lilac);
+      box-shadow: var(--shadow);
+      padding: 44px 32px;
+      text-align: center;
+      margin: 40px 0 80px;
+    }
+
+    .contact h2 {
+      font-size: clamp(26px, 4.4vw, 38px);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      text-transform: uppercase;
+      margin: 0 0 12px;
+    }
+
+    .contact p { margin: 0 auto 26px; max-width: 32em; color: var(--ink); }
+
+    .btn {
+      display: inline-block;
+      font-weight: 800;
+      font-size: 16px;
+      text-decoration: none;
+      color: var(--ink);
+      background: var(--paper);
+      border: var(--bd);
+      border-radius: 10px;
+      padding: 15px 28px;
+      box-shadow: var(--shadow-sm);
+      transition: transform .15s ease, box-shadow .15s ease;
+      word-break: break-word;
+    }
+
+    .btn:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 var(--ink); }
+
+    /* ---------- Footer ---------- */
+    footer.site { border-top: var(--bd); padding: 26px 0 54px; }
+
+    footer.site .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--muted);
+    }
+
+    footer.site p { margin: 0; }
+    footer.site a { text-decoration: none; color: var(--muted); }
+    footer.site a:hover { color: var(--ink); }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 760px) {
+      .cards { grid-template-columns: 1fr; }
+      .row { grid-template-columns: 1fr; gap: 6px; }
+    }
+
+    @media (max-width: 620px) {
+      .wrap { padding: 0 18px; }
+      body { font-size: 16.5px; }
+      header.site .wrap { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .brand { font-size: 15px; }
+      .hero { padding: 46px 0 42px; }
+      .standfirst { font-size: 17px; }
+      .card { box-shadow: var(--shadow-sm); border-radius: 12px; }
+      .card .in { padding: 20px 18px 22px; }
+      .contact { padding: 32px 20px; box-shadow: var(--shadow-sm); margin-bottom: 60px; }
+      .btn { padding: 14px 20px; font-size: 15px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <span class="mark"></span>
+        <span class="name">Rolati: Cine Reels Scout</span>
+      </a>
+      <nav class="site">
+        <a href="index.html" class="active">Contact</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="wrap">
+        <span class="eyebrow mono">Support</span>
+        <h1>Say<span class="line2">hello.</span></h1>
+        <p class="standfirst">Questions, feedback, or something that isn't working the way it should — email is the way to reach us.</p>
+      </div>
+    </section>
+
+    <div class="wrap">
+
+      <div class="cards">
+
+        <a class="card" href="mailto:caoducbaotam6434@icloud.com">
+          <div class="head mono">01 — Email</div>
+          <div class="in">
+            <h2>Get in touch</h2>
+            <p>Support requests, feature ideas, or anything else about the App.</p>
+            <span class="val">caoducbaotam6434@icloud.com</span>
+          </div>
+        </a>
+
+        <a class="card c-blue" href="privacy.html">
+          <div class="head mono">02 — Privacy</div>
+          <div class="in">
+            <h2>Your data</h2>
+            <p>No registration, no tracking, no ads. Everything stays on your device.</p>
+            <span class="val">Read the policy →</span>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="rows">
+
+        <div class="row">
+          <div class="label mono">Reporting a bug</div>
+          <p>Include your <b>device model</b>, <b>iOS version</b>, and what you were doing when it happened — it makes a fix much quicker to find.</p>
+        </div>
+
+        <div class="row">
+          <div class="label mono">Movie data</div>
+          <p>Titles, images, ratings, and trailers come from <b>TMDB</b> and <b>YouTube</b>. If something looks wrong in the metadata, let us know and we'll take a look.</p>
+        </div>
+
+        <div class="row">
+          <div class="label mono">Clearing your data</div>
+          <p>Favorites can be cleared any time from the <b>Settings</b> screen in the App. Uninstalling removes all locally stored data — nothing is kept on a server.</p>
+        </div>
+
+      </div>
+
+      <section class="contact">
+        <h2>Send us a message</h2>
+        <p>We read everything that comes in. Tap below to open your mail app with the subject line ready.</p>
+        <a class="btn" href="mailto:caoducbaotam6434@icloud.com?subject=Rolati%3A%20Cine%20Reels%20Scout%20%E2%80%94%20Support">caoducbaotam6434@icloud.com</a>
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <p class="mono">© 2026 Rolati: Cine Reels Scout</p>
+      <a class="mono" href="privacy.html">Privacy Policy</a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
